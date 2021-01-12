@@ -18,28 +18,13 @@ h5 {
   color: rgb(48, 17, 107);
 }
 
+/* Override Boostrap Style for navbar */
 .navbar-brand {
   color: rgb(48, 17, 107) !important;
 }
 
-i {
-  color: rgb(48, 17, 107);
-  font-size: 2rem;
-}
 
-p {
-  color: black;
-}
-
-ul {
-  list-style-type: none;
-}
-
-ul li {
-  color: #212529;
-}
-
-
+/* Data Card Grid */
 .grid-container {
   display: grid;
   width: 601px;
@@ -73,7 +58,24 @@ ul li {
 
 .name-age { grid-area: name-age; margin-top: 2rem; }
 
+i {
+  color: rgb(48, 17, 107);
+  font-size: 2rem;
+}
 
+p {
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  color: #212529;
+}
+
+/* Responsive */
 @media only screen and (max-width: 600px) {
   .grid-container {
     display: grid;
@@ -111,7 +113,7 @@ ul li {
   .name-age { grid-area: name-age; margin-top: 2rem; }
 }
 
-
+/* Content Styles */
 header.masthead {
   position: relative;
   background-color: #343a40;
@@ -236,6 +238,7 @@ header.masthead h1:hover {
   opacity: 0.3;
 }
 
+/* Footer */
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
