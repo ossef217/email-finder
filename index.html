@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Finder</title>
+
+    <!-- Font Awsome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- Boostrap 4 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- JQuery Library CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+        <a class="navbar-brand" href="index.html">Youssef Elhaimoudi - API Search</a>
+        <a class="glyphicon glyphicon-user" style="font-size: 1.8rem; text-align: right;" href="#">
+            <i class="fas fa-user-circle"></i>
+        </a>
+        
+        </div>
+    </nav>
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+
+        <div id="result-title"></div>
+
+        <div id="overlay"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                <h1 class="mb-5" id="searchLabel">Search Any Email Address</h1>
+                <p id="sub-title-searchLabel"><strong style="color: rgb(235, 235, 144);">Start Here</strong> - Look up the owner's name, photos and online profiles. See what you find!</p>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                <form>
+                    <div class="form-row">
+                    <div class="col-12 col-md-9 mb-2 mb-md-0 mt-1">
+                        <input type="email" id="userEmail" class="form-control form-control-lg" placeholder="Enter an email..." required />
+                    </div>
+                    <div class="col-12 col-md-3 mt-1">
+                        <button type="button" onclick="loadApi()" class="btn btn-block btn-lg btn-warning" style="color: rgb(27, 27, 110);">
+                            GO!
+                        </button>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md mt-3">
+                            <p style="color: rgb(235, 235, 144);">Enter Any Email Address. They won't be notified.</p>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+      <!-- Testimonials -->
+    <section class="testimonials text-center bg-light">
+        <div class="container">
+        <h2 class="mb-5">Latest Posts</h2>
+        <div class="row">
+            <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img class="img-fluid rounded-circle mb-3" src="#" alt="">
+                <h5>Lorem ipsum 1</h5>
+                <p class="font-weight-light mb-0">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.    
+                </p>
+            </div>
+            </div>
+            <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img class="img-fluid rounded-circle mb-3" src="#" alt="">
+                <h5>Lorem ipsum 2</h5>
+                <p class="font-weight-light mb-0">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+            </div>
+            <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img class="img-fluid rounded-circle mb-3" src="#" alt="">
+                <h5>Lorem ipsum 3</h5>
+                <p class="font-weight-light mb-0">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img class="img-fluid rounded-circle mb-3" src="#" alt="">
+                <h5>Lorem ipsum 4</h5>
+                <p class="font-weight-light mb-0">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.    
+                </p>
+            </div>
+            </div>
+            <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img class="img-fluid rounded-circle mb-3" src="#" alt="">
+                <h5>Lorem ipsum 5</h5>
+                <p class="font-weight-light mb-0">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+            </div>
+            <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img class="img-fluid rounded-circle mb-3" src="#" alt="">
+                <h5>Lorem ipsum 6</h5>
+                <p class="font-weight-light mb-0">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-light">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <ul class="list-inline mb-2">
+                <li class="list-inline-item">
+                <a href="#">Home</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                <a href="#">About</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                <a href="#">Contact</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+                </li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; Youssef Tech 2020. All Rights Reserved.</p>
+            </div>
+            <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item mr-3">
+                <a href="#">
+                    <i class="fab fa-facebook fa-2x fa-fw"></i>
+                </a>
+                </li>
+                <li class="list-inline-item mr-3">
+                <a href="#">
+                    <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a href="#">
+                    <i class="fab fa-instagram fa-2x fa-fw"></i>
+                </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Boostrap JS files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- Custom JS-->
+    <script src="./js/app.js"></script>
+
+</body>
+</html>

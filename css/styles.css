@@ -1,0 +1,214 @@
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.grid-container {
+  display: grid;
+  width: 601px;
+  grid-template-columns: 0.6fr 1.3fr 1.1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  text-align: left;
+  border: 1px solid;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  border-radius: 15px;
+  box-shadow: 6px 6px 6px 6px;
+  grid-template-areas:
+    "user-img name-age name-age ."
+    ". description description ."
+    ". address phone-number ."
+    ". email relative .";
+}
+
+.description { grid-area: description; }
+
+.address { grid-area: address; }
+
+.phone-number { grid-area: phone-number;}
+
+.email { grid-area: email; }
+
+.relative { grid-area: relative; }
+
+.user-img { grid-area: user-img; margin-right: 3rem; } .user-img img { width: 100px; height: 100px; }
+
+.name-age { grid-area: name-age; margin-top: 2rem; }
+
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 0.6fr 1.3fr 1.1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    text-align: left;
+    border: 1px solid rgb(230, 218, 218);
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-radius: 15px;
+    box-shadow: 6px 6px 6px 6px;
+    grid-template-areas:
+      "user-img name-age name-age ."
+      ". description description ."
+      ". address address ."
+      ". phone-number phone-number ."
+      ". email email ."
+      ". relative relative .";
+  }
+  .description { grid-area: description; }
+
+  .address { grid-area: address; }
+
+  .phone-number { grid-area: phone-number; margin-bottom: 1rem; }
+
+  .email { grid-area: email; }
+
+  .relative { grid-area: relative; padding-top: 1rem;}
+
+  .user-img { grid-area: user-img; margin-right: 3rem; } .user-img img { width: 100px; height: 100px; }
+
+  .name-age { grid-area: name-age; margin-top: 2rem; }
+}
+
+
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/bg-masthead.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .user-img {
+  width: 80px;
+  height: 80;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+  color: rgb(215, 246, 250);
+}
+
+header.masthead h1:hover {
+  color: whitesmoke;
+  cursor: crosshair;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 5rem;
+}
+
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.testimonials .testimonial-item {
+  max-width: 18rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(215, 246, 250);
+  border-radius: 20px 1px;
+}
+
+.testimonials .testimonial-item:hover {
+  background-color: rgb(127, 233, 233);
+  cursor: move;
+  border-radius: 1px 20px;
+  box-shadow: 10px 0px 10px 0px;
+}
+
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+.call-to-action {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/bg-masthead.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.call-to-action .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
