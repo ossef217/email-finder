@@ -28,6 +28,14 @@ const loadApi = async () => {
                 document.getElementById('userEmail').value = '';
                 document.getElementById('userEmail').focus();
             } else {
+                const htmlSpinner = `
+                    <div class="spinner-grow" style="width: 8rem; height: 8rem;" role="status">
+                        <span class="sr-only mb-4">Loading...</span>
+                    </div>
+                `
+                infosResult.innerHTML = htmlSpinner;
+                // Added next code to see the Spinner loading in 3 seconds
+                await new Promise(resolve => setTimeout(resolve, 3000));
                 const htmlResult = `
                     <h1>(1) Result(s) Found.</h1>
                     <p>
