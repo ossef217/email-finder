@@ -3,14 +3,42 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4,
-h5,
 h6 {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
+  color: rgb(48, 17, 107);
 }
+h2 {
+  color: rgb(48, 17, 107);
+}
+
+h5 {
+  color: rgb(48, 17, 107);
+}
+
+.navbar-brand {
+  color: rgb(48, 17, 107) !important;
+}
+
+i {
+  color: rgb(48, 17, 107);
+  font-size: 2rem;
+}
+
+p {
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  color: #212529;
+}
+
 
 .grid-container {
   display: grid;
@@ -110,11 +138,11 @@ header.masthead .overlay {
 
 header.masthead h1 {
   font-size: 2rem;
-  color: rgb(215, 246, 250);
+  color: rgb(48, 17, 107);
 }
 
 header.masthead h1:hover {
-  color: whitesmoke;
+  color:  rgb(64, 26, 134);
   cursor: crosshair;
 }
 
@@ -173,12 +201,12 @@ header.masthead h1:hover {
   max-width: 18rem;
   margin-top: 1rem;
   padding: 1rem;
-  background-color: rgb(215, 246, 250);
+  background-color: rgb(169, 176, 233);
   border-radius: 20px 1px;
 }
 
 .testimonials .testimonial-item:hover {
-  background-color: rgb(127, 233, 233);
+  background-color: rgb(132, 143, 235);
   cursor: move;
   border-radius: 1px 20px;
   box-shadow: 10px 0px 10px 0px;
