@@ -9,6 +9,14 @@ const subSearchL = document.getElementById('sub-title-searchLabel');
 const loadApi = async () => {
     var mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if(document.getElementById('userEmail').value.match(mailFormat)){
+        const htmlSpinner = `
+                    <div class="spinner-border text-primary mb-2" style="width: 8rem; height: 8rem;" role="status">
+                    <span class="sr-only">Loading...</span>
+                    </div>
+                `
+        infosResult.innerHTML = htmlSpinner;
+        // Added next code to see the Spinner loading in 3 seconds
+        await new Promise(resolve => setTimeout(resolve, 3000));
         try {
             // Return Email value
             const searchInput = document.getElementById('userEmail').value;
@@ -28,14 +36,6 @@ const loadApi = async () => {
                 document.getElementById('userEmail').value = '';
                 document.getElementById('userEmail').focus();
             } else {
-                const htmlSpinner = `
-                    <div class="spinner-grow" style="width: 8rem; height: 8rem;" role="status">
-                        <span class="sr-only mb-4">Loading...</span>
-                    </div>
-                `
-                infosResult.innerHTML = htmlSpinner;
-                // Added next code to see the Spinner loading in 3 seconds
-                await new Promise(resolve => setTimeout(resolve, 3000));
                 const htmlResult = `
                     <h1>(1) Result(s) Found.</h1>
                     <p>
@@ -77,34 +77,42 @@ const displayInfos = (objs) => {
                     <p>${obj.description}</p>
                 </div>
                 <div class="address">
-                    <ul>
+                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                         <i class="fas fa-map-marked-alt"></i>
-                        <li>${obj.address}</li>
-                    </ul>
+                        <p class="font-weight-light mb-0">
+                            ${obj.address}  
+                        </p>         
+                    </div>
                 </div>
                 <div class="phone-number">
-                    <ul>
-                        <i class="fas fa-phone-volume"></i>
-                        ${obj.phone_numbers.map(phone => {
-                            return `<li>${phone}</li>`;
-                        }).join('')
-                        }
-                    </ul>
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <i class="fas fa-phone-volume"></i>
+                        <p class="font-weight-light mb-0">
+                            ${obj.phone_numbers.map(phone => {
+                                return `<p>${phone}</p>`;
+                            }).join('')
+                            } 
+                        </p>         
+                </div> 
                 </div>
                 <div class="email">
-                    <ul>
+                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                         <i class="fas fa-envelope-square"></i>
-                        <li>${obj.email}</li>
-                    </ul>
+                        <p class="font-weight-light mb-0">
+                            ${obj.email}  
+                        </p>         
+                    </div>
                 </div>
                 <div class="relative">
-                    <ul>
-                        <i class="fas fa-users"></i>
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <i class="fas fa-users"></i>
+                    <p class="font-weight-light mb-0">
                         ${obj.relatives.map(rel => {
-                            return `<li>${rel}</li>`;
+                            return `<p>${rel}</p>`;
                         }).join('')
                         }
-                    </ul>
+                    </p>         
+                </div> 
                 </div>
                 <div class="user-img">
                     <img src="./img/user.png" alt="user">
@@ -118,4 +126,3 @@ const displayInfos = (objs) => {
         .join('');
         infosCard.innerHTML = htmlUsefInfos;
 };
-

@@ -23,20 +23,28 @@ h5 {
   color: rgb(48, 17, 107) !important;
 }
 
+.navbar-brand:hover {
+  color: rgb(108, 73, 173) !important;
+}
+
+.result-title {
+  padding-bottom: 2rem;
+}
+
 
 /* Data Card Grid */
 .grid-container {
   display: grid;
   width: 601px;
   grid-template-columns: 0.6fr 1.3fr 1.1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: .5fr .6fr .5fr .5fr;
   gap: 0px 0px;
   text-align: left;
-  border: 1px solid;
   margin: 0 auto;
   margin-bottom: 3rem;
+  border: 1px solid rgb(85, 116, 136);
   border-radius: 15px;
-  box-shadow: 6px 6px 6px 6px;
+  box-shadow: 6px 6px 6px 6px rgb(85, 116, 136);
   grid-template-areas:
     "user-img name-age name-age ."
     ". description description ."
@@ -46,11 +54,11 @@ h5 {
 
 .description { grid-area: description; }
 
-.address { grid-area: address; }
+.address { grid-area: address; padding-right: 3rem;}
 
 .phone-number { grid-area: phone-number;}
 
-.email { grid-area: email; }
+.email { grid-area: email; padding-right: 3rem;}
 
 .relative { grid-area: relative; }
 
@@ -61,6 +69,10 @@ h5 {
 i {
   color: rgb(48, 17, 107);
   font-size: 2rem;
+}
+
+i:hover {
+  color: rgb(108, 73, 173);
 }
 
 p {
@@ -81,15 +93,15 @@ ul li {
     display: grid;
     width: 80%;
     grid-template-columns: 0.6fr 1.3fr 1.1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr .6fr .5fr .5fr;
     gap: 0px 0px;
     text-align: left;
-    border: 1px solid rgb(230, 218, 218);
     margin: 0 auto;
     margin-bottom: 3rem;
     padding-bottom: 1rem;
+    border: 1px solid rgb(85, 116, 136);
     border-radius: 15px;
-    box-shadow: 6px 6px 6px 6px;
+    box-shadow: 6px 6px 6px 6px rgb(85, 116, 136);
     grid-template-areas:
       "user-img name-age name-age ."
       ". description description ."
@@ -102,11 +114,11 @@ ul li {
 
   .address { grid-area: address; }
 
-  .phone-number { grid-area: phone-number; margin-bottom: 1rem; }
+  .phone-number { grid-area: phone-number; }
 
   .email { grid-area: email; }
 
-  .relative { grid-area: relative; padding-top: 1rem;}
+  .relative { grid-area: relative;}
 
   .user-img { grid-area: user-img; margin-right: 3rem; } .user-img img { width: 100px; height: 100px; }
 
@@ -154,7 +166,7 @@ header.masthead h1:hover {
     padding-bottom: 12rem;
   }
   header.masthead h1 {
-    font-size: 3rem;
+    font-size: 2.1rem;
   }
 }
 
